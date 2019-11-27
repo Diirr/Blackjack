@@ -2,15 +2,16 @@ public class Play{
 
   public static void main(String[] args){
 
-    //Dealer d;
-    //Player p;
       GameMaster gm = new GameMaster();
 
       while(gm.start()!=2){
-        System.out.println();
-        System.out.println();
-        gm.playAGame();
+        try{
+          gm.playAGame();
+          Thread.sleep(3000);
+        }catch(Exception e){
+
+        }
       }
-      System.out.println("Thank you for playing!!!");
+      System.out.println("Vielen Dank für Ihre Teilnahme!!!");
   }
 }
