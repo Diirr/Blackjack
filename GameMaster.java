@@ -2,14 +2,6 @@ import java.util.*;
 
 public class GameMaster{
 
-  //Dealer dealer;
-  //Player player;
-
-  /*public GameMaster(Dealer d, Player p){
-    this.dealer = d;
-    this.player = p;
-  }*/
-
   public int start(){
 
       Scanner scanner = new Scanner(System.in);
@@ -51,7 +43,7 @@ public class GameMaster{
     if(player == 22){
       player=12;
     }
-
+/*---------------------------------------------------------------------------------------------------------------*/
     //Ab Runde 3 spielt der Spieler
     int auswahl = 1;
     while(auswahl!=2){
@@ -73,6 +65,7 @@ ine Karte!");
       }
     }
 
+/*---------------------------------------------------------------------------------------------------------------*/
     // Dealer spielt nachdem alle gespielt haben
     while(dealer<17){
       dealer += cd.getCard();
