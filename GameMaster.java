@@ -84,23 +84,23 @@ public class GameMaster{
       System.out.println("Der Dealer hat aktuell: "+dealerSecond);
     }
 
-
-    if(dealerSecond<22&&dealer>player){
-      System.out.println("Das Haus gewinnt mit: "+dealer+"Sie haben: "+player" Augen.");
+    if(dealerSecond<22&&dealerSecond>player){
+      System.out.println("Das Haus gewinnt mit: "+dealerSecond+". Sie haben: "+player+" Augen.");
       return false;
     }
-    if (dealerSecond<22&&dealer<player){
-    System.out.println("Das Haus gewinnt mit: "+dealer+"Sie haben: "+player" Augen.");
+    if (dealerSecond<22&&dealerSecond<player){
+    System.out.println("Das Haus gewinnt mit: "+dealerSecond+". Sie haben: "+player+" Augen.");
     return true;
     }
-    if (dealerSecond<22&&dealer==player){
-    System.out.println("Unentschieden. Das Haus und du haben jeweils: "+dealer);
+    if (dealerSecond<22&&dealerSecond==player){
+    System.out.println("Unentschieden. Das Haus und du haben jeweils: "+dealerSecond);
     return true;
     }
-    if(dealerSedond>21&&player<22){
-      System.out.println("Sie gewinnen mit: "+player+" Der Deahler hat: "+dealer);
+    if(dealerSecond>21&&player<22){
+      System.out.println("Sie gewinnen mit: "+player+" Der Deahler hat: "+dealerSecond);
       return true;
     }
 
-
+    return true;
+  }
 }
