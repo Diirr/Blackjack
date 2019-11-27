@@ -84,8 +84,20 @@ public class GameMaster{
 
 /*---------------------------------------------------------------------------------------------------------------*/
     // Dealer spielt nachdem alle gespielt haben
+    if(dealerSecond == 22){
+      dealerSecond=12;
+    }
+    System.out.println("Der Dealer hat: "+dealerSecond);
+
     while(dealerSecond<17){
-      dealerSecond += cd.getCard();
+      tmpDealer = cd.getCard();
+      dealerSecond += tmpDealer;
+
+      // Prüfung ob der Dealer mit einem Ass mehr als 21 Punkte hätte
+      if(tmppDealer==11&&dealerSecond>21){
+        dealerSecond -=10;
+      }
+
       System.out.println("Der Dealer hat aktuell: "+dealerSecond);
     }
 
@@ -94,11 +106,11 @@ public class GameMaster{
       return false;
     }
     if (dealerSecond<22&&dealerSecond<player){
-    System.out.println("Das Haus gewinnt mit: "+dealerSecond+". Sie haben: "+player+" Augen.");
+    System.out.println("Das Haus verliert mit: "+dealerSecond+". Sie haben gewonnen: "+player+" Augen.");
     return true;
     }
     if (dealerSecond<22&&dealerSecond==player){
-    System.out.println("Unentschieden. Das Haus und du haben jeweils: "+dealerSecond);
+    System.out.println("Unentschieden. Das Haus und Sie haben jeweils: "+dealerSecond);
     return true;
     }
     if(dealerSecond>21&&player<22){
