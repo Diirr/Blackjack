@@ -57,20 +57,36 @@ public class GameMaster{
     }
     System.out.println();
 /*---------------------------------------------------------------------------------------------------------------*/
-    //Ab Runde 3 spielt der Spieler
+//Ab Runde 3 spielt der Spieler
     int auswahl = 1;
+    int elevenOrOne;
     int karte= 0;
     while(auswahl!=2){
       System.out.println("Möchten sie weiter spielen? Ihr akuteller Kartenwert beträgt: "+player);
       System.out.println("\n1. Neue Karte! \n2. Keine Karte!\n");
       Scanner scanner = new Scanner(System.in);
       auswahl = scanner.nextInt();
-      if(auswahl == 1){
-	karte = cd.getCard();
-        player += karte;
-	System.out.println("\nSie haben eine "+ karte + " erhalten.\n");
-      }
+      karte = cd.getCard();
 
+      if(auswahl == 1 && karte != 11){
+
+        player += kauswahlarte;
+        System.out.println("\nSie haben eine "+ karte + " erhalten.\n");
+        }
+      if(auswahl == 1 && karte == 11){
+        System.out.println("Sie haben ein Ass erhalten. Soll es als 1 oder 11 gewertet werden?\n");
+        System.out.println("1. Ass als 1 werten! \n2. Ass als 11 werten!\n");
+        elevenOrOne  = scanner.nextInt();
+      if(elevenOrOne == 1){
+        player += 1;
+        System.out.println("Sie haben sich für eine 1 entschieden. Ihr neuer Kartenwert beträgt: "+player);
+      }
+      if(elevenOrOne == 2){
+        player += 11;
+        System.out.println("Sie haben sich für eine 11 entschieden. Ihr neuer Kartenwert beträgt: "+player);
+
+      }
+      }
 
       if(player == 21){
         System.out.println("Sie haben gewonnen: "+player);
@@ -81,6 +97,7 @@ public class GameMaster{
         return false;
       }
     }
+
 
 /*---------------------------------------------------------------------------------------------------------------*/
     // Dealer spielt nachdem alle gespielt haben
