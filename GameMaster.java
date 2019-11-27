@@ -18,21 +18,23 @@ public class GameMaster{
 
     CardDeck cd = new CardDeck();
     cd.createDeck();
-    int dealer=0;
+    int dealerFirst=0;
+    int dealerSecond=0;
     int player=0;
 
     //Runde 1
-    dealer += cd.getCard();
+    dealerFirst += cd.getCard();
+    dealerSecond = dealerFirst;
     player += cd.getCard();
     System.out.println("Runde 1!");
-    System.out.println("Dealer: "+dealer);
+    System.out.println("Dealer: "+dealerFirst);
     System.out.println("Player: "+player);
-
+    System.out.println();
     //Runde 2
     dealer += cd.getCard();
     player += cd.getCard();
     System.out.println("Runde 2!");
-    //System.out.println("Dealer: "+dealer);
+    System.out.println("Dealer: "+dealerFirst);
     System.out.println("Player: "+player);
 
     if(player==21){
