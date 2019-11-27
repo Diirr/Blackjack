@@ -6,9 +6,9 @@ public class GameMaster{
 
       Scanner scanner = new Scanner(System.in);
       int auswahl;
-      System.out.println("*************************************\nHerzlich Willkommen zu BLACKJACK!!!!\n*************************************");
-      System.out.println("1: Neue Runde!");
-      System.out.println("2: Beenden!");
+      System.out.println("*************************************\nWelcome to BLACKJACK!!!!\n*************************************");
+      System.out.println("1: New Game!");
+      System.out.println("2: End!");
 
       auswahl = scanner.nextInt();
       return auswahl;
@@ -48,7 +48,7 @@ public class GameMaster{
     System.out.println("Card: "+tmpPlayer+" Player: "+player);
 
     if(player==21){
-      System.out.println("Herzlichen Glückwunsch, Sie haben gewonnen- BlackJack!!!");
+      System.out.println("Congratulations, you win - BlackJack!!!");
       return true;
     }
 
@@ -70,7 +70,7 @@ public class GameMaster{
         player += karte;
 	System.out.println("\nSie haben eine "+ karte + " erhalten.\n");
       }
-	
+
 
       if(player == 21){
         System.out.println("Sie haben gewonnen: "+player);
@@ -87,37 +87,36 @@ public class GameMaster{
     if(dealerSecond == 22){
       dealerSecond=12;
     }
-    System.out.println("Der Dealer hat: "+dealerSecond);
+    System.out.println("The dealer has: "+dealerSecond);
 
     while(dealerSecond<17){
+      System.out.println("The dealer draws a card!");
       tmpDealer = cd.getCard();
       dealerSecond += tmpDealer;
-
       // Prüfung ob der Dealer mit einem Ass mehr als 21 Punkte hätte
       if(tmpDealer==11&&dealerSecond>21){
         dealerSecond -=10;
       }
 
-      System.out.println("Der Dealer hat aktuell: "+dealerSecond);
+      System.out.println("Card: "+tmpDealer+" The dealer currently has: "+dealerSecond);
     }
 
     if(dealerSecond<22&&dealerSecond>player){
-      System.out.println("Das Haus gewinnt mit: "+dealerSecond+". Sie haben: "+player+" Augen.");
+      System.out.println("The house wins with: "+dealerSecond+". You've got: "+player+" points.\n\n");
       return false;
     }
     if (dealerSecond<22&&dealerSecond<player){
-    System.out.println("Das Haus verliert mit: "+dealerSecond+". Sie haben gewonnen: "+player+" Augen.");
+    System.out.println("The house loses with: "+dealerSecond+". You win with: "+player+" points.\n\n");
     return true;
     }
     if (dealerSecond<22&&dealerSecond==player){
-    System.out.println("Unentschieden. Das Haus und Sie haben jeweils: "+dealerSecond);
+    System.out.println("We've got a draw with: "+dealerSecond+" points\n\n");
     return true;
     }
     if(dealerSecond>21&&player<22){
-      System.out.println("Sie gewinnen mit: "+player+" Der Deahler hat: "+dealerSecond);
+      System.out.println("You win with: "+player+" The dealer has: "+dealerSecond+" points\n\n");
       return true;
     }
-
     return true;
   }
 }

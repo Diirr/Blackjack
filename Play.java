@@ -6,10 +6,11 @@ public class Play{
     //Player p;
       GameMaster gm = new GameMaster();
 
-      if(gm.start()==2){
-        System.out.println("Vielen Dank für Ihre Teilnahme!!!!");
-      }else{
+      while(gm.start()!=2){
+        System.out.println();
+        System.out.println();
         gm.playAGame();
       }
+      System.out.println("Thank you for playing!!!");
   }
 }
