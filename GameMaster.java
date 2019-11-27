@@ -31,7 +31,7 @@ public class GameMaster{
     System.out.println("Player: "+player);
     System.out.println();
     //Runde 2
-    dealer += cd.getCard();
+    dealerSecond += cd.getCard();
     player += cd.getCard();
     System.out.println("Runde 2!");
     System.out.println("Dealer: "+dealerFirst);
@@ -61,24 +61,24 @@ public class GameMaster{
         return true;
       }
       if(player > 21){
-        System.out.println("Sie haben verloren. Aktuelle Punktzahl: "+player+" Der Deahler hat: "+dealer);
+        System.out.println("Sie haben verloren. Aktuelle Punktzahl: "+player+" Der Deahler hat: "+dealerFirst);
         return false;
       }
     }
 
 /*---------------------------------------------------------------------------------------------------------------*/
     // Dealer spielt nachdem alle gespielt haben
-    while(dealer<17){
-      dealer += cd.getCard();
-      System.out.println("Der Dealer hat aktuell: "+dealer);
+    while(dealerSecond<17){
+      dealerSecond += cd.getCard();
+      System.out.println("Der Dealer hat aktuell: "+dealerSecond);
     }
 
-    if(dealer<22&&dealer>player){
-      System.out.println("Das Haus gewinnt: "+dealer+"Sie haben: "+player);
+    if(dealerSecond<22&&dealerSecond>player){
+      System.out.println("Das Haus gewinnt: "+dealerSecond+"Sie haben: "+player);
       return false;
     }
-    if(dealer>21&&player<22){
-      System.out.println("Sie gewinnen: "+player+" Der Deahler hat: "+dealer);
+    if(dealerSecond>21&&player<22){
+      System.out.println("Sie gewinnen: "+player+" Der Deahler hat: "+dealerSecond);
       return true;
     }
 
