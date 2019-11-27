@@ -94,7 +94,7 @@ public class GameMaster{
       dealerSecond += tmpDealer;
 
       // Prüfung ob der Dealer mit einem Ass mehr als 21 Punkte hätte
-      if(tmppDealer==11&&dealerSecond>21){
+      if(tmpDealer==11&&dealerSecond>21){
         dealerSecond -=10;
       }
 
