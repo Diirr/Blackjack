@@ -48,14 +48,19 @@ public class GameMaster{
 /*---------------------------------------------------------------------------------------------------------------*/
     //Ab Runde 3 spielt der Spieler
     int auswahl = 1;
+    int karte= 0;
     while(auswahl!=2){
-      System.out.println("Möchten sie weiter spien? Ihr akuteller Kartenwert beträgt: "+player);
-      System.out.println("1. Neue Karte! \n2. Keine Karte!");
+      System.out.println("Möchten sie weiter spielen? Ihr akuteller Kartenwert beträgt: "+player);
+      System.out.println("\n1. Neue Karte! \n2. Keine Karte!\n");
       Scanner scanner = new Scanner(System.in);
       auswahl = scanner.nextInt();
       if(auswahl == 1){
-        player += cd.getCard();
+	karte = cd.getCard();
+        player += karte;
+	System.out.println("\nSie haben eine "+ karte + " erhalten.\n");
       }
+	
+
       if(player == 21){
         System.out.println("Sie haben gewonnen: "+player);
         return true;
