@@ -2,14 +2,6 @@ import java.util.*;
 
 public class GameMaster{
 
-  //Dealer dealer;
-  //Player player;
-
-  /*public GameMaster(Dealer d, Player p){
-    this.dealer = d;
-    this.player = p;
-  }*/
-
   public int start(){
 
       Scanner scanner = new Scanner(System.in);
@@ -24,6 +16,8 @@ public class GameMaster{
 
   public boolean playAGame(){
 
+    CardDeck cd = new CardDeck();
+    cd.createDeck();
     int dealer=0;
     int player=0;
 
@@ -35,7 +29,7 @@ public class GameMaster{
     System.out.println("Player: "+player);
 
     //Runde 2
-    dealer += cd.getHiddenCard();
+    dealer += cd.getCard();
     player += cd.getCard();
     System.out.println("Runde 2!");
     System.out.println("Dealer: "+dealer);
@@ -49,32 +43,45 @@ public class GameMaster{
     if(player == 22){
       player=12;
     }
-
+/*---------------------------------------------------------------------------------------------------------------*/
     //Ab Runde 3 spielt der Spieler
     int auswahl = 1;
     while(auswahl!=2){
       System.out.println("Möchten sie weiter spien? Ihr akuteller Kartenwert beträgt: "+player);
-      System.out.println("1. Neue Karte! \n2. Keine Karte!");
+      System.out.println("1. Neue Karte! \n2. Ke      dealer += cd.getCard();
+ine Karte!");
       Scanner scanner = new Scanner(System.in);
       auswahl = scanner.nextInt();
       if(auswahl == 1){
         player += cd.getCard();
       }
       if(player == 21){
-        System.out.println("Sie haben gewonnen");
+        System.out.println("Sie haben gewonnen: "+player);
         return true;
       }
       if(player > 21){
-        System.out.println("Sie haben verloren");
+        System.out.println("Sie haben verloren. Aktuelle Punktzahl: "+player+" Der Deahler hat: "+dealer);
         return false;
       }
+    }
+
+/*---------------------------------------------------------------------------------------------------------------*/
     // Dealer spielt nachdem alle gespielt haben
     while(dealer<17){
-      dealer += cd.getCard;
+      dealer += cd.getCard();
+      System.out.println("Der Dealer hat aktuell: "+dealer);
     }
-  }
 
+    if(dealer<22&&dealer>player){
+      System.out.println("Das Haus gewinnt: "+dealer+"Sie haben: "+player);
+      return false;
+    }
+    if(dealer>21&&player<22){
+      System.out.println("Sie gewinnen: "+player+" Der Deahler hat: "+dealer);
+      return true;
+    }
 
-    System.out.println("Sie haben verloren");
+    System.out.println("Sie haben verloren + letzte Ausgabe");
+    return true;
   }
 }
