@@ -32,7 +32,7 @@ public class GameMaster{
     dealer += cd.getCard();
     player += cd.getCard();
     System.out.println("Runde 2!");
-    System.out.println("Dealer: "+dealer);
+    //System.out.println("Dealer: "+dealer);
     System.out.println("Player: "+player);
 
     if(player==21){
@@ -48,8 +48,7 @@ public class GameMaster{
     int auswahl = 1;
     while(auswahl!=2){
       System.out.println("Möchten sie weiter spien? Ihr akuteller Kartenwert beträgt: "+player);
-      System.out.println("1. Neue Karte! \n2. Ke      dealer += cd.getCard();
-ine Karte!");
+      System.out.println("1. Neue Karte! \n2. Keine Karte!");
       Scanner scanner = new Scanner(System.in);
       auswahl = scanner.nextInt();
       if(auswahl == 1){
