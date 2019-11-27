@@ -6,9 +6,9 @@ public class GameMaster{
 
       Scanner scanner = new Scanner(System.in);
       int auswahl;
-      System.out.println("*****************************************************\nHerzlich Willkommen zu einer Runde Blackjack!!!!\n*****************************************************");
-      System.out.println("Möchten Sie ein neues Spiel starten dann drücken sie die 1!");
-      System.out.println("zum Beenden drücken Sie bitte die 2.");
+      System.out.println("*************************************\nHerzlich Willkommen zu BLACKJACK!!!!\n*************************************");
+      System.out.println("1: Neue Runde!");
+      System.out.println("2: Beenden!");
 
       auswahl = scanner.nextInt();
       return auswahl;
@@ -18,31 +18,44 @@ public class GameMaster{
 
     CardDeck cd = new CardDeck();
     cd.createDeck();
-    int dealer=0;
+    //Kartewerte der Spieler
+    int dealerFirst=0;
+    int dealerSecond=0;
     int player=0;
 
     //Runde 1
-    dealer += cd.getCard();
-    player += cd.getCard();
-    System.out.println("Runde 1!");
-    System.out.println("Dealer: "+dealer);
-    System.out.println("Player: "+player);
+    int tmpDealer = cd.getCard();
+    int tmpPlayer = cd.getCard();
+
+    dealerFirst += tmpDealer;
+    dealerSecond = dealerFirst;
+    player += tmpPlayer;
+
+    System.out.println("Round 1!");
+    System.out.println("Card: "+tmpDealer+" Dealer: "+dealerFirst);
+    System.out.println("Card: "+tmpPlayer+" Player: "+player);
+    System.out.println();
 
     //Runde 2
-    dealer += cd.getCard();
-    player += cd.getCard();
-    System.out.println("Runde 2!");
-    //System.out.println("Dealer: "+dealer);
-    System.out.println("Player: "+player);
+    tmpDealer = cd.getCard();
+    tmpPlayer = cd.getCard();
+
+    dealerSecond += tmpDealer;
+    player += tmpPlayer;
+
+    System.out.println("Round 2!");
+    System.out.println("Card: hidden! Dealer: "+dealerFirst);
+    System.out.println("Card: "+tmpPlayer+" Player: "+player);
 
     if(player==21){
-      System.out.println("Herzlichen Glückwunsch");
+      System.out.println("Herzlichen Glückwunsch, Sie haben gewonnen- BlackJack!!!");
       return true;
     }
 
     if(player == 22){
       player=12;
     }
+    System.out.println();
 /*---------------------------------------------------------------------------------------------------------------*/
     //Ab Runde 3 spielt der Spieler
     int auswahl = 1;
@@ -59,31 +72,32 @@ public class GameMaster{
         return true;
       }
       if(player > 21){
-        System.out.println("Sie haben verloren. Aktuelle Punktzahl: "+player+" Der Deahler hat: "+dealer);
+        System.out.println("Sie haben verloren. Aktuelle Punktzahl: "+player+" Der Deahler hat: "+dealerFirst);
         return false;
       }
     }
 
 /*---------------------------------------------------------------------------------------------------------------*/
     // Dealer spielt nachdem alle gespielt haben
-    while(dealer<17){
-      dealer += cd.getCard();
-      System.out.println("Der Dealer hat aktuell: "+dealer);
+    while(dealerSecond<17){
+      dealerSecond += cd.getCard();
+      System.out.println("Der Dealer hat aktuell: "+dealerSecond);
     }
 
-    if(dealer<22&&dealer>player){
+
+    if(dealerSecond<22&&dealer>player){
       System.out.println("Das Haus gewinnt mit: "+dealer+"Sie haben: "+player" Augen.");
       return false;
     }
-    if (dealer<22&&dealer<player){
+    if (dealerSecond<22&&dealer<player){
     System.out.println("Das Haus gewinnt mit: "+dealer+"Sie haben: "+player" Augen.");
     return true;
     }
-    if (dealer<22&&dealer==player){
+    if (dealerSecond<22&&dealer==player){
     System.out.println("Unentschieden. Das Haus und du haben jeweils: "+dealer);
     return true;
     }
-    if(dealer>21&&player<22){
+    if(dealerSedond>21&&player<22){
       System.out.println("Sie gewinnen mit: "+player+" Der Deahler hat: "+dealer);
       return true;
     }
