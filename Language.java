@@ -55,15 +55,15 @@ public class Language{
     //Englisch
     if(language==2){
       strDefault = "Fehler 404";
-      str1 = "The dealer has received a "+x+" ("+color+"). The currently card value of the dealer is "+y+".";
-      str2 = "You have received a "+x+" ("+color+"). Your current card value is "+y+".\n";
-      str3 = "The dealer has received a face down card. The currently card value of the dealer is "+x+".";
+      str1 = "The dealer has received a "+x+" ("+color+"). The dealer currently has "+y+".";
+      str2 = "You have received a "+x+" ("+color+"). You currently have "+y+".\n";
+      str3 = "The dealer has received a face down card. The dealer currently has "+x+".";
       str4 = "Congratulations - BlackJack!!!\n";
-      str5 = "The dealer looses with "+x+". You win with "+y+".\n\n";
-      str6 = "The dealer wins with "+x+". Yout loose with "+y+".\n\n";
-      str7 = "The dealer has"+x+". \n";
+      str5 = "The dealer loses with "+x+". You win with "+y+".\n\n";
+      str6 = "The dealer wins with "+x+". You lose with "+y+".\n\n";
+      str7 = "The dealer has"+x+" points. \n";
       str8 = "The dealer draws a card.";
-      str9 = "You have choosen a "+x+". Your new card value is: "+y+"\n";
+      str9 = "You have chosen a "+x+". Your new card value is: "+y+"\n";
       str10 = "Would you like to draw a card? Your current card value is: "+x+"\n\n1. New card!\n2. No card!\n";
       str11 = "You have received an ace ("+ color +"). Should it be counted as 1 or 11?\n\n 1. Ass as value 1! \n2. Ass as value 11!\n";
       str12 = "Draw. Dealer and player have "+x+".\n\n";
