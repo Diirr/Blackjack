@@ -61,7 +61,7 @@ public class Language{
       str4 = "Congratulations - BlackJack!!!\n";
       str5 = "The dealer loses with "+x+". You win with "+y+".\n\n";
       str6 = "The dealer wins with "+x+". You lose with "+y+".\n\n";
-      str7 = "The dealer has"+x+" points. \n";
+      str7 = "The dealer has "+x+" points. \n";
       str8 = "The dealer draws a card.";
       str9 = "You have chosen a "+x+". Your new card value is: "+y+"\n";
       str10 = "Would you like to draw a card? Your current card value is: "+x+"\n\n1. New card!\n2. No card!\n";
