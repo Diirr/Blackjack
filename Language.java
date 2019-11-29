@@ -19,6 +19,8 @@ public class Language{
     String str13;
     String str14;
     String str15;
+    String str16;
+    String str17;
 
   public int getLanguage(){
     return this.language;
@@ -50,8 +52,10 @@ public class Language{
       str11 = "Sie haben ein Ass ("+color+") erhalten. Soll es als 1 oder 11 gewertet werden?\n\n 1. Ass als 1 werten? \n2. Ass als 11 werten?\n";
       str12 = "Unentschieden. Dealer und Spieler haben "+x+" Augen.\n\n";
       str13 = "*************************************\nHerzlich Willkommen zu BLACKJACK!!!!\n*************************************\n1: Neues Spiel?\n2: Beenden?";
-      str14 = "Vielen Dank für Ihre Teilnahme!!!";
+      str14 = "Der Dealer hat das Spiel gewonnen.\n Der Dealer hat: "+x+"\n Sie haben: "+y+"\n Vielen Dank für Ihre Teilnahme!!!";
       str15 = "Möchten Sie weiter spielen oder das Spiel beenden?\n1. Neue Runde?\n2. Beenden?";
+      str16 = "Sie haben das Spiel gewonnen. Herzlichen Glückwunsch!!\n Der Dealer hat: "+x+"\n Sie haben: "+y+"\n Vielen Dank für Ihre Teilnahme!!!";
+      str17 = "Das Spiel endet unentschieden.\n Der Dealer hat: "+x+"\n Sie haben: "+y+"\n Vielen Dank für Ihre Teilnahme!!!";
     }
 
     //Englisch
@@ -72,6 +76,8 @@ public class Language{
       str13 = "*************************************\nWelcome to BLACKJACK!!!!\n*************************************\n1: New Game?\n2: End?";
       str14 = "Thank you for your participation!!";
       str15 = "Would you like to continue playing or teminate the game?\n1. Continue playing?\n2. Stop playing?";
+      str16 = "Thank you for your participation!!";
+      str17 = "Thank you for your participation!!";
     }
 
     Thread.sleep(s*1000);
@@ -106,6 +112,10 @@ public class Language{
           return str14;
       case 15:
           return str15;
+      case 16:
+          return str16;
+      case 17:
+          return str17;
       default:
           return strDefault;
     }

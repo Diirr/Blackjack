@@ -9,18 +9,14 @@ public class Play{
     GameMaster gm = new GameMaster(language);
 
     try{
-      gm.start();
-      gm.playAGame();
-      while(gm.furtherRound()!=2){
-          gm.playAGame();
+      if(gm.start()!=2){
+        while(gm.furtherRound()!=2){
+            gm.playAGame();
+        }
       }
+      System.out.println(gm.result());
     }catch(Exception e){
-
-    }
-    try{
-      System.out.println(language.printWait(1,14,0,0,""));
-    }catch(Exception e){
-
+      //Fehlerbeschreibung
     }
   }
 }

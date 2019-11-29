@@ -3,6 +3,8 @@ import java.util.*;
 public class GameMaster{
 
   Language language;
+  int dealerCount = 0;
+  int playerCount = 0;
 
   public GameMaster(Language language){
     this.language = language;
@@ -13,6 +15,9 @@ public class GameMaster{
       int auswahl;
       System.out.println(language.printWait(2,13,0,0,""));
       auswahl = scanner.nextInt();
+      if(auswahl==1){
+        playAGame();
+      }
       return auswahl;
   }
 
@@ -22,6 +27,17 @@ public class GameMaster{
     System.out.println(language.printWait(2,15,0,0,""));
     auswahl = scanner.nextInt();
     return auswahl;
+  }
+
+  public String result() throws Exception{
+    if(dealerCount>playerCount){
+      return language.printWait(1,14,dealerCount,playerCount,"");
+    }
+    if(dealerCount<playerCount){
+      return language.printWait(1,16,dealerCount,playerCount,"");
+    }else{
+      return language.printWait(1,17,dealerCount,playerCount,"");
+    }
   }
 
 
@@ -60,6 +76,7 @@ public class GameMaster{
 
     if(player==21){
       System.out.println(language.printWait(2,4,0,0,""));
+      playerCount++;
       return true;
     }
 
@@ -104,10 +121,12 @@ public class GameMaster{
 
       if(player == 21){
         System.out.println(language.printWait(2,4,0,0,""));
+        playerCount++;
         return true;
       }
       if(player > 21){
         System.out.println(language.printWait(2,6,dealerSecond, player,""));
+        dealerCount++;
         return false;
       }
 /*---------------------------------------------------------------------------------------------------------------*/
@@ -127,18 +146,23 @@ public class GameMaster{
 
     if(dealerSecond<22&&dealerSecond>player){
       System.out.println(language.printWait(2,6,dealerSecond, player,""));
+      dealerCount++;
       return false;
     }
     if (dealerSecond<22&&dealerSecond<player){
       System.out.println(language.printWait(2,5,dealerSecond,player,""));
+      playerCount++;
       return true;
     }
     if (dealerSecond<22&&dealerSecond==player){
       System.out.println(language.printWait(1,12,dealerSecond,0,""));
+      dealerCount++;
+      playerCount++;
       return true;
     }
     if(dealerSecond>21&&player<22){
       System.out.println(language.printWait(2,5,dealerSecond,player,""));
+      playerCount++;
       return true;
     }
     return true;
