@@ -74,10 +74,10 @@ public class Language{
       str11 = "You have received an ace ("+ color +"). Should it be counted as 1 or 11?\n\n 1. Ass as value 1? \n2. Ass as value 11?\n";
       str12 = "Draw. Dealer and player have "+x+".\n\n";
       str13 = "*************************************\nWelcome to BLACKJACK!!!!\n*************************************\n1: New Game?\n2: End?";
-      str14 = "Thank you for your participation!!";
+      str14 = "We're afraid you lost. \nThe dealer wins with: "+x+" points\n You only have: "+y+"\nThank you for your participation!!";
       str15 = "Would you like to continue playing or teminate the game?\n1. Continue playing?\n2. Stop playing?";
-      str16 = "Thank you for your participation!!";
-      str17 = "Thank you for your participation!!";
+      str16 = "Congratulations - you win!!!!\n The dealer has: "+x+"\n You have: "+y+"\nThank you for your participation!!";
+      str17 = "The game ends with a draw. \n The dealer has: "+x+"\n You have: "+y+"\n Thank you for your participation!!";
     }
 
     Thread.sleep(s*1000);
