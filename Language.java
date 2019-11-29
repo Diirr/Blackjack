@@ -18,6 +18,7 @@ public class Language{
     String str12;
     String str13;
     String str14;
+    String str15;
 
   public int getLanguage(){
     return this.language;
@@ -45,11 +46,12 @@ public class Language{
       str7 = "Der Dealer hat "+x+" Augen. \n";
       str8 = "Der Dealer zieht eine Karte";
       str9 = "Sie haben sich für eine "+x+" entschieden. Ihr neuer Kartenwert beträgt: "+y+"\n";
-      str10 = "Möchten sie weiter spielen? Ihr akuteller Kartenwert beträgt: "+x+ "\n\n1. Neue Karte! \n2. Keine Karte!\n";
-      str11 = "Sie haben ein Ass ("+color+") erhalten. Soll es als 1 oder 11 gewertet werden?\n\n 1. Ass als 1 werten! \n2. Ass als 11 werten!\n";
+      str10 = "Möchten sie weiter spielen? Ihr akuteller Kartenwert beträgt: "+x+ "\n\n1. Neue Karte? \n2. Keine Karte?\n";
+      str11 = "Sie haben ein Ass ("+color+") erhalten. Soll es als 1 oder 11 gewertet werden?\n\n 1. Ass als 1 werten? \n2. Ass als 11 werten?\n";
       str12 = "Unentschieden. Dealer und Spieler haben "+x+" Augen.\n\n";
       str13 = "*************************************\nHerzlich Willkommen zu BLACKJACK!!!!\n*************************************\n1: Neues Spiel?\n2: Beenden?";
       str14 = "Vielen Dank für Ihre Teilnahme!!!";
+      str15 = "Möchten Sie weiter spielen oder das Spiel beenden?\n1. Neue Runde?\n Beenden?";
     }
 
     //Englisch
@@ -64,11 +66,12 @@ public class Language{
       str7 = "The dealer has "+x+" points. \n";
       str8 = "The dealer draws a card.";
       str9 = "You have chosen a "+x+". Your new card value is: "+y+"\n";
-      str10 = "Would you like to draw a card? Your current card value is: "+x+"\n\n1. New card!\n2. No card!\n";
-      str11 = "You have received an ace ("+ color +"). Should it be counted as 1 or 11?\n\n 1. Ass as value 1! \n2. Ass as value 11!\n";
+      str10 = "Would you like to draw a card? Your current card value is: "+x+"\n\n1. New card?\n2. No card?\n";
+      str11 = "You have received an ace ("+ color +"). Should it be counted as 1 or 11?\n\n 1. Ass as value 1? \n2. Ass as value 11?\n";
       str12 = "Draw. Dealer and player have "+x+".\n\n";
       str13 = "*************************************\nWelcome to BLACKJACK!!!!\n*************************************\n1: New Game?\n2: End?";
       str14 = "Thank you for your participation!!";
+      str15 = "Would you like to continue playing or teminate the game?\n1. Continue playing?\n2. Stop playing?";
     }
 
     Thread.sleep(s*1000);
@@ -101,6 +104,8 @@ public class Language{
           return str13;
       case 14:
           return str14;
+      case 15:
+          return str15;
       default:
           return strDefault;
     }

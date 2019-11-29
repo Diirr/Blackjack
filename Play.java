@@ -10,6 +10,7 @@ public class Play{
 
     try{
       gm.start();
+      gm.playAGame();
       while(gm.furtherRound()!=2){
           gm.playAGame();
       }
