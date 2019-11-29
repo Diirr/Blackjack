@@ -59,7 +59,7 @@ public class Language{
       str16 = "Sie haben das Spiel gewonnen. Herzlichen Glückwunsch!!\nDer Dealer hat: "+x+"\nSie haben: "+y+"\nVielen Dank für Ihre Teilnahme!!!";
       str17 = "Das Spiel endet unentschieden.\nDer Dealer hat: "+x+"\nSie haben: "+y+"\nVielen Dank für Ihre Teilnahme!!!";
       str18 = "Bitte machen Sie Ihren Einsatz.\n";
-      str19 = "Sie haben "+x+"€ gewonnen.\n";
+      str19 = "Sie haben aktuell "+x+"€.\n";
     }
 
     //Englisch
@@ -79,11 +79,11 @@ public class Language{
       str12 = "Draw. Dealer and player have "+x+".\n\n";
       str13 = "*************************************\nWelcome to BLACKJACK!!!!\n*************************************\n1: New Game?\n2: End?";
       str14 = "We're afraid you lost. \nThe dealer wins with: "+x+" points\nYou only have: "+y+"\nThank you for your participation!!";
-      str15 = "Would you like to continue playing or end the game?\n1. Continue playing?\n 2.Stop playing?";
+      str15 = "Would you like to continue playing or end the game?\n1. Continue playing?\n2. Stop playing?";
       str16 = "Congratulations - you win!!!!\nThe dealer has: "+x+"\nYou have: "+y+"\nThank you for your participation!!";
       str17 = "The game ends with a draw. \nThe dealer has: "+x+"\nYou have: "+y+"\nThank you for your participation!!";
       str18 = "Please place your bet\n";
-      str19 = "You won "+x+"$\n";
+      str19 = "Your current balance is "+x+"$\n";
     }
 
     Thread.sleep(s*1000);

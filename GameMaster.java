@@ -47,16 +47,17 @@ public class GameMaster{
     int bet;
     System.out.println(language.printWait(2,18,0,0,""));
     bet = scanner.nextInt();
+    this.money = this.money - bet;
     return bet;
   }
 
   public void calculateWinnings(boolean bj) throws Exception {
     if(bj){
-      money = money + (bet*3);
-      System.out.println(language.printWait(1,19,this.bet *3,0,""));
+      this.money = this.money + (bet*3);
+      System.out.println(language.printWait(1,19,this.money,0,""));
     }else{
-      money = money + (bet*2);
-      System.out.println(language.printWait(1,19,this.bet *2,0,""));
+      this.money = this.money + (bet*2);
+      System.out.println(language.printWait(1,19,this.money,0,""));
     }
   }
 
@@ -185,6 +186,7 @@ public class GameMaster{
       System.out.println(language.printWait(1,12,dealerSecond,0,""));
       dealerCount++;
       playerCount++;
+      this.money = this.money + this.bet;
       return true;
     }
     if(dealerSecond>21&&player<22){
