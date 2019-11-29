@@ -82,7 +82,7 @@ public class Language{
       str15 = "Would you like to continue playing or end the game?\n1. Continue playing?\n2.Stop playing?";
       str16 = "Congratulations - you win!!!!\nThe dealer has: "+x+"\nYou have: "+y+"\nThank you for your participation!!";
       str17 = "The game ends with a draw. \nThe dealer has: "+x+"\nYou have: "+y+"\nThank you for your participation!!";
-      str18 = "Please make your bet\n";
+      str18 = "Please place your bet\n";
       str19 = "You won "+x+"$\n";
     }
 
