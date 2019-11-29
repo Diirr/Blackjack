@@ -9,9 +9,9 @@ public class Play{
     GameMaster gm = new GameMaster(language);
 
     try{
-      while(gm.start()!=2){
+      gm.start();
+      while(gm.furtherRound()!=2){
           gm.playAGame();
-          Thread.sleep(2000);
       }
     }catch(Exception e){
 
@@ -19,7 +19,7 @@ public class Play{
     try{
       System.out.println(language.printWait(1,14,0,0,""));
     }catch(Exception e){
-      
+
     }
   }
 }

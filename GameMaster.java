@@ -9,13 +9,21 @@ public class GameMaster{
   }
 
   public int start() throws Exception{
-
       Scanner scanner = new Scanner(System.in);
       int auswahl;
-      System.out.println(language.printWait(3,13,0,0,""));
+      System.out.println(language.printWait(2,13,0,0,""));
       auswahl = scanner.nextInt();
       return auswahl;
   }
+
+  public int furtherRound() throws Exception{
+    Scanner scanner = new Scanner(System.in);
+    int auswahl;
+    System.out.println(language.printWait(2,15,0,0,""));
+    auswahl = scanner.nextInt();
+    return auswahl;
+  }
+
 
   public boolean playAGame() throws Exception{
 
