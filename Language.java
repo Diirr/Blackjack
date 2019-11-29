@@ -26,7 +26,7 @@ public class Language{
   public void chooseLanguage(){
     Scanner scanner = new Scanner(System.in);
     int auswahl;
-    System.out.println("please choose your language:\n1.Deutsch\n2.Englisch\n");
+    System.out.println("please choose your language:\n1.Deutsch\n2.English\n");
     auswahl = scanner.nextInt();
     this.language = auswahl;
   }
