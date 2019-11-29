@@ -1,18 +1,20 @@
+import java.util.*;
+
 public class Play{
 
   public static void main(String[] args){
+    Language language = new Language();
+    language.chooseLanguage();
 
-      GameMaster gm = new GameMaster();
-
+    GameMaster gm = new GameMaster(language);
+    try{
       while(gm.start()!=2){
-        try{
           gm.playAGame();
           Thread.sleep(3000);
-        }catch(Exception e){
-
-        }
       }
+    }catch(Exception e){
 
-      System.out.println("Vielen Dank für Ihre Teilnahme!!!");
+    }
+    System.out.println("Vielen Dank für Ihre Teilnahme!!!");
   }
 }
