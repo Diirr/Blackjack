@@ -78,8 +78,8 @@ public class Language{
       str11 = "You have received an ace ("+ color +"). Should it be counted as 1 or 11?\n\n1. Ass as value 1? \n2. Ass as value 11?\n";
       str12 = "Draw. Dealer and player have "+x+".\n\n";
       str13 = "*************************************\nWelcome to BLACKJACK!!!!\n*************************************\n1: New Game?\n2: End?";
-      str14 = "We're afraid you lost. \nThe dealer wins with: "+x+" points\n You only have: "+y+"\nThank you for your participation!!";
-      str15 = "Would you like to continue playing or end the game?\n1. Continue playing?\n2.Stop playing?";
+      str14 = "We're afraid you lost. \nThe dealer wins with: "+x+" points\nYou only have: "+y+"\nThank you for your participation!!";
+      str15 = "Would you like to continue playing or end the game?\n1. Continue playing?\n 2.Stop playing?";
       str16 = "Congratulations - you win!!!!\nThe dealer has: "+x+"\nYou have: "+y+"\nThank you for your participation!!";
       str17 = "The game ends with a draw. \nThe dealer has: "+x+"\nYou have: "+y+"\nThank you for your participation!!";
       str18 = "Please place your bet\n";
