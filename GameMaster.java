@@ -153,6 +153,7 @@ public class GameMaster{
       }
       if(player > 21){
         System.out.println(language.printWait(2,6,dealerSecond, player,""));
+        System.out.println(cashOut());
         dealerCount++;
         return false;
       }
@@ -173,6 +174,7 @@ public class GameMaster{
 
     if(dealerSecond<22&&dealerSecond>player){
       System.out.println(language.printWait(2,6,dealerSecond, player,""));
+      System.out.println(cashOut());
       dealerCount++;
       return false;
     }
@@ -184,9 +186,11 @@ public class GameMaster{
     }
     if (dealerSecond<22&&dealerSecond==player){
       System.out.println(language.printWait(1,12,dealerSecond,0,""));
+      this.money = this.money + this.bet;
+      System.out.println(cashOut());
       dealerCount++;
       playerCount++;
-      this.money = this.money + this.bet;
+
       return true;
     }
     if(dealerSecond>21&&player<22){
