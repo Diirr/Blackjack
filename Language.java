@@ -51,7 +51,7 @@ public class Language{
       str12 = "Unentschieden. Dealer und Spieler haben "+x+" Augen.\n\n";
       str13 = "*************************************\nHerzlich Willkommen zu BLACKJACK!!!!\n*************************************\n1: Neues Spiel?\n2: Beenden?";
       str14 = "Vielen Dank für Ihre Teilnahme!!!";
-      str15 = "Möchten Sie weiter spielen oder das Spiel beenden?\n1. Neue Runde?\n Beenden?";
+      str15 = "Möchten Sie weiter spielen oder das Spiel beenden?\n1. Neue Runde?\n2. Beenden?";
     }
 
     //Englisch
