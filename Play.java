@@ -14,6 +14,7 @@ public class Play{
             gm.playAGame();
         }
       }
+      System.out.println(gm.cashOut());
       System.out.println(gm.result());
     }catch(Exception e){
       //Fehlerbeschreibung

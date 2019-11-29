@@ -5,6 +5,8 @@ public class GameMaster{
   Language language;
   int dealerCount = 0;
   int playerCount = 0;
+  int money = 0;
+  int bet = 0;
 
   public GameMaster(Language language){
     this.language = language;
@@ -40,6 +42,27 @@ public class GameMaster{
     }
   }
 
+  public int bet() throws Exception{
+    Scanner scanner = new Scanner(System.in);
+    int bet;
+    System.out.println(language.printWait(2,18,0,0,""));
+    bet = scanner.nextInt();
+    return bet;
+  }
+
+  public void calculateWinnings(boolean bj) throws Exception {
+    if(bj){
+      money = money + (bet*3);
+      System.out.println(language.printWait(1,19,this.bet *3,0,""));
+    }else{
+      money = money + (bet*2);
+      System.out.println(language.printWait(1,19,this.bet *2,0,""));
+    }
+  }
+
+  public String cashOut() throws Exception {
+    return language.printWait(1,19,money,0,"");
+  }
 
   public boolean playAGame() throws Exception{
 
@@ -50,6 +73,7 @@ public class GameMaster{
     int dealerSecond=0;
     int player=0;
 
+    this.bet = bet();
     //Runde 1
     int tmpDealer = cd.getCard();
     dealerFirst += tmpDealer;
@@ -77,6 +101,7 @@ public class GameMaster{
     if(player==21){
       System.out.println(language.printWait(2,4,0,0,""));
       playerCount++;
+      calculateWinnings(true);
       return true;
     }
 
@@ -122,6 +147,7 @@ public class GameMaster{
       if(player == 21){
         System.out.println(language.printWait(2,4,0,0,""));
         playerCount++;
+        calculateWinnings(true);
         return true;
       }
       if(player > 21){
@@ -151,6 +177,7 @@ public class GameMaster{
     }
     if (dealerSecond<22&&dealerSecond<player){
       System.out.println(language.printWait(2,5,dealerSecond,player,""));
+      calculateWinnings(false);
       playerCount++;
       return true;
     }
@@ -162,6 +189,7 @@ public class GameMaster{
     }
     if(dealerSecond>21&&player<22){
       System.out.println(language.printWait(2,5,dealerSecond,player,""));
+      calculateWinnings(false);
       playerCount++;
       return true;
     }
