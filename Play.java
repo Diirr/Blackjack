@@ -7,14 +7,19 @@ public class Play{
     language.chooseLanguage();
 
     GameMaster gm = new GameMaster(language);
+
     try{
       while(gm.start()!=2){
           gm.playAGame();
-          Thread.sleep(3000);
+          Thread.sleep(2000);
       }
     }catch(Exception e){
 
     }
-    System.out.println("Vielen Dank für Ihre Teilnahme!!!");
+    try{
+      System.out.println(language.printWait(1,14,0,0,""));
+    }catch(Exception e){
+      
+    }
   }
 }

@@ -21,7 +21,7 @@ public class GameMaster{
 
     CardDeck cd = new CardDeck();
     cd.createDeck(language.getLanguage());
-    //Kartewerte der Spieler
+    //Kartenwerte der Spieler
     int dealerFirst=0;
     int dealerSecond=0;
     int player=0;
@@ -48,7 +48,6 @@ public class GameMaster{
     if(player == 22){
       player=12;
     }
-
     System.out.println(language.printWait(2,2,tmpPlayer, player,cd.getCardColor()));
 
     if(player==21){

@@ -17,6 +17,7 @@ public class Language{
     String str11;
     String str12;
     String str13;
+    String str14;
 
   public int getLanguage(){
     return this.language;
@@ -46,26 +47,28 @@ public class Language{
       str9 = "Sie haben sich für eine "+x+" entschieden. Ihr neuer Kartenwert beträgt: "+y+"\n";
       str10 = "Möchten sie weiter spielen? Ihr akuteller Kartenwert beträgt: "+x+ "\n\n1. Neue Karte! \n2. Keine Karte!\n";
       str11 = "Sie haben ein Ass ("+color+") erhalten. Soll es als 1 oder 11 gewertet werden?\n\n 1. Ass als 1 werten! \n2. Ass als 11 werten!\n";
-      str12 = "Unentschieden. Beide haben "+x+" Augen.\n\n";
+      str12 = "Unentschieden. Dealer und Spieler haben "+x+" Augen.\n\n";
       str13 = "*************************************\nHerzlich Willkommen zu BLACKJACK!!!!\n*************************************\n1: Neues Spiel?\n2: Beenden?";
+      str14 = "Vielen Dank für Ihre Teilnahme!!!";
     }
 
     //Englisch
     if(language==2){
       strDefault = "Fehler 404";
-      str1 = "The dealer has a "+x+" ("+color+"). The currently hand has "+y+".";
-      str2 = "You've got a "+x+" ("+color+"). Your currently Hand is "+y+".\n";
-      str3 = "Der Dealer hat eine verdeckte Karers beträgt "+x+".";
-      str4 = "Herzlichen Glückwunsch - BlackJack!!!\n";
-      str5 = "Der Dealer verliert mit "+x+". Sie gewinnen mit "+y+" Augen.\n\n";
-      str6 = "Der Dealer gewinnt mit "+x+". Sie verlieren mit "+y+" Augen.\n\n";
-      str7 = "Der Dealer hat "+x+" Augen. \n";
-      str8 = "Der Dealer zieht eine Karte";
-      str9 = "Sie haben sich für eine "+x+" entrt beträgt: "+y+"\n";
-      str10 = "Möchten sie weiter spielen? Ihr akgt: "+x+ "\n\n1. Neue Karte! \n2. Keine Karte!\n";
-      str11 = "Sie haben ein Ass ("+color+") erhalten. Soll es als 1 oerden?\n\n 1. Ass als 1 werten! \n2. Ass als 11 werten!\n";
-      str12 = "Unentschieden. Beide haben "+x+" Augen.\n\n";
+      str1 = "The dealer has received a "+x+" ("+color+"). The currently card value of the dealer is "+y+".";
+      str2 = "You have received a "+x+" ("+color+"). Your current card value is "+y+".\n";
+      str3 = "The dealer has received a face down card. The currently card value of the dealer is "+x+".";
+      str4 = "Congratulations - BlackJack!!!\n";
+      str5 = "The dealer looses with "+x+". You win with "+y+".\n\n";
+      str6 = "The dealer wins with "+x+". Yout loose with "+y+".\n\n";
+      str7 = "The dealer has"+x+". \n";
+      str8 = "The dealer draws a card.";
+      str9 = "You have choosen a "+x+". Your new card value is: "+y+"\n";
+      str10 = "Would you like to draw a card? Your current card value is: "+x+"\n\n1. New card!\n2. No card!\n";
+      str11 = "You have received an ace ("+ color +"). Should it be counted as 1 or 11?\n\n 1. Ass as value 1! \n2. Ass as value 11!\n";
+      str12 = "Draw. Dealer and player have "+x+".\n\n";
       str13 = "*************************************\nWelcome to BLACKJACK!!!!\n*************************************\n1: New Game?\n2: End?";
+      str14 = "Thank you for your participation!!";
     }
 
     Thread.sleep(s*1000);
@@ -96,6 +99,8 @@ public class Language{
           return str12;
       case 13:
           return str13;
+      case 14:
+          return str14;
       default:
           return strDefault;
     }
